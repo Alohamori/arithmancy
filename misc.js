@@ -43,9 +43,9 @@ const flip = ev => {
   v = v < 10 ? v : '?'.repeat(g + 1);
 
   if (sound) {
-    chalk.currentTime = rand(0, 31) / 10;
+    chalk.currentTime = rand(0, 32) / 10;
     chalk.play();
-    setTimeout(() => chalk.pause(), 600);
+    setTimeout(() => chalk.pause(), 500);
   }
 
   if (anim) {
@@ -54,7 +54,7 @@ const flip = ev => {
     setTimeout(() => {
       set_value(e, v);
       e.setAttribute('transition-style', `in:wipe:${wipes[7 - w]}`);
-    }, 350);
+    }, 150);
   } else set_value(e, v);
 
   guess[g] = v;

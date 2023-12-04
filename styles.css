@@ -23,8 +23,11 @@ body {
   position: absolute;
   filter: url(#rough);
   font-size: 7em;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   --transition__easing: linear;
-  --transition__duration: 394ms;
+  --transition__duration: 200ms;
 }
 
 .numeral {
@@ -64,9 +67,6 @@ body {
 
 .tap {
   touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
 
