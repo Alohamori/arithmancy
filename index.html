@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Essence of Arithmancy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <script src="util.js"></script>
+    <script src="misc.js"></script>
+  </head>
+  <body>
+    <div id="board">
+      <div id="g0" class="geom even">
+        <div class="numeral">4</div>
+        <div class="numeral"></div>
+        <div class="numeral"></div>
+        <div class="numeral"></div>
+      </div>
+      <div id="g1" class="geom odd">
+        <div class="numeral">??</div>
+        <div class="numeral">??</div>
+        <div class="numeral">??</div>
+        <div class="numeral">9</div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+      <defs>
+        <filter id="rough">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9"></feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="5"></feDisplacementMap>
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>

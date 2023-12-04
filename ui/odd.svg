@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -15 320 320">
+  <style>.shape { stroke-width: 3px; stroke: #fff9; fill: none; filter: url(#shapes); }</style>
+  <defs>
+    <filter id="shapes">
+      <feTurbulence type="fractalNoise" baseFrequency="2.5"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="7"></feDisplacementMap>
+    </filter>
+  </defs>
+  <g transform="rotate(180) translate(-240, -290)">
+    <path class="shape" d="M 157.08 234.127 A 120 120 0 0 0 239.54 109.54"></path>
+    <path class="shape" d="M 0.457 109.54 A 120 120 0 0 0 82.92 234.13"></path>
+    <path class="shape" d="M 206.32 36.64 A 120 120 0 0 0 33.68 36.64"></path>
+    <circle class="shape" cx="120" cy="120" r="60"></circle>
+    <circle class="shape" cx="10" cy="70" r="40"></circle>
+    <circle class="shape" cx="230" cy="70" r="40"></circle>
+    <circle class="shape" cx="120" cy="250" r="40"></circle>
+    <path class="shape" d="M 49 60 l 140 0 M 205 100 l -70 115 M 106 213 l -68 -114  Z"></path>
+  </g>
+</svg>

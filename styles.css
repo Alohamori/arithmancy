@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; }
+
+@font-face { font-family: Critters; src: url(ui/Critters.woff)  format('woff');  unicode-range: U+3?; }
+@font-face { font-family: Garamond; src: url(ui/Garamond.woff2) format('woff2'); unicode-range: U+3?; }
+
+body {
+  background: #152D3b url(ui/board.png);
+  background-size: cover;
+  font-size: 1.15vw;
+}
+
+#board { display: flex; justify-content: center; }
+
+.geom {
+  width: 40vw;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.odd { background-image: url(ui/even.svg); }
+.even  { background-image: url(ui/odd.svg); }
+
+.geom div {
+  position: absolute;
+  filter: url(#rough);
+  font-size: 7em;
+  --transition__easing: linear;
+  --transition__duration: 394ms;
+}
+
+.numeral {
+  width: 20%;
+  font-family: Garamond;
+  letter-spacing: -0.5vw;
+  color: #fff9;
+  text-align: center;
+} .numeral:nth-child(4) { width: 25%; font-size: 9em; }
+
+.critter {
+  font-family: Critters;
+  background-image: url(ui/shade.png);
+  background-position: center center;
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} .critter:nth-child(4) { font-size: 10em; }
+
+.even .numeral:nth-child(1) { top: 2%; left: 39.5%; }
+.even .numeral:nth-child(2) { bottom: 14.25%; right: 6%; }
+.even .numeral:nth-child(3) { bottom: 14.25%; left: 4.5%; }
+.even .numeral:nth-child(4) { top: 38%; left: 37%; }
+.even .critter:nth-child(1) { top: 5%; left: 38.75%; }
+.even .critter:nth-child(2) { bottom: 11.5%; right: 4.75%; }
+.even .critter:nth-child(3) { bottom: 11.5%; left: 4.75%; }
+.even .critter:nth-child(4) { top: 40%; left: 34.5%; }
+
+.odd .numeral:nth-child(1) { top: 11.5%; left: 5.25%; }
+.odd .numeral:nth-child(2) { top: 11.5%; right: 5.75%; }
+.odd .numeral:nth-child(3) { bottom: 4.5%; left: 39.5%; }
+.odd .numeral:nth-child(4) { top: 22.5%; left: 36.75%; }
+.odd .critter:nth-child(1) { top: 14%; left: 4.5%; }
+.odd .critter:nth-child(2) { top: 14%; right: 5%; }
+.odd .critter:nth-child(3) { bottom: 2%; left: 39%; }
+.odd .critter:nth-child(4) { top: 25%; left: 34.5%; }
+
+.tap {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+@media (orientation: portrait) {
+  #board { flex-direction: column; width: 50vh; margin: auto; }
+  .geom { width: 100%; font-size: 1.4vh; }
+}
